@@ -1,9 +1,16 @@
-console.log('hola');
+let busqueda = 'bad boys';
 
-
-
-fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=f213488ae3f21d01f82fcbb8d801c399&language=es-ESquery=')
+fetch('https://api.themoviedb.org/3/search/movie?api_key=f213488ae3f21d01f82fcbb8d801c399&query='+busqueda)
 .then(res => res.json())
 .then(res => {
-    console.log(res.results);
+
+    let peliculas = res.results;
+
+    for (let pelicula of peliculas){
+        console.log(pelicula.poster_path);
+    }
+    
+
 });
+
+
