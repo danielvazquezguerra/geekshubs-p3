@@ -1,17 +1,14 @@
-let busqueda = 'maria';
+
 const key = 'api_key=f213488ae3f21d01f82fcbb8d801c399';
-const baseUrl = 'https://image.tmdb.org/t/p/'; 
-const imageSize = 'w500/';
-fetch(`${baseUrl}${imageSize}${key}&query=${busqueda}`)
-
-.then(res => res.json())
-.then(res => {
-
-    let peliculas = res.results;
-
-    console.log(peliculas);
-    
-
-});
+const baseUrl = 'https://api.themoviedb.org/3/search/movie?'; 
+let busqueda = 'amor';
+const lista = '&language=en-US&query=';
+let rootFetch = baseUrl+key+lista+busqueda;
 
 
+
+axios.get(rootFetch)
+.then(res =>{
+    let peliculas = res.data.results
+    console.log(peliculas)
+})
