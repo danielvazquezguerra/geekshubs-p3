@@ -17,10 +17,8 @@ axios.get(rootFetch)
         
         console.log(pelicula.title);
         let rutaImg = 'https://image.tmdb.org/t/p/w300'+pelicula.poster_path;
-        container.innerHTML = '<div><img class="fotopeli" src='+ rutaImg +'></div>'
+        container.innerHTML = '<div class="fotopeli"><img src='+ rutaImg +'></div>'
         
-
     }
 
-    
 })
