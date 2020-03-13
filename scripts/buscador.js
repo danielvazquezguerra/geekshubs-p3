@@ -1,10 +1,10 @@
 
 const key = 'api_key=f213488ae3f21d01f82fcbb8d801c399';
 const baseUrl = 'https://api.themoviedb.org/3/search/movie?'; 
-let busqueda = 'bad boys II';
+let busqueda = 'lethal weapon';
 const lista = '&language=en-US&query=';
 let rootFetch = baseUrl+key+lista+busqueda;
-let container = document.querySelector('.container');
+let container = document.querySelector('.container-grid');
 
 
 
@@ -16,8 +16,8 @@ axios.get(rootFetch)
     
     for (pelicula of peliculas) {
         
-        console.log(peliculas);
-        console.log(peliculas.title);
+
+        console.log(pelicula.title);
 
         if (pelicula.poster_path != null){
 
