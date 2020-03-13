@@ -9,16 +9,24 @@ let container = document.querySelector('.container');
 
 
 axios.get(rootFetch)
-.then(res =>{
-    let peliculas = res.data.results
+.then(res => {
+    let peliculas = res.data.results;
+
     console.log(peliculas)
     
     for (pelicula of peliculas) {
         
-        console.log(pelicula.title);
-        let rutaImg = 'https://image.tmdb.org/t/p/w300'+pelicula.poster_path;
-        container.innerHTML = '<div class="fotopeli"><img src='+ rutaImg +'></div>'
+        console.log(peliculas);
+        console.log(peliculas.title);
+
+        if (pelicula.poster_path != null){
+
+            let rutaImg = 'https://image.tmdb.org/t/p/w300'+pelicula.poster_path;
+            container.innerHTML += `<div class="fotopeli"><img src="${rutaImg}"></div>` 
+    
+        }
         
+       
     }
 
 })
