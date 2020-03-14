@@ -5,7 +5,9 @@ let busqueda = 'the godfather';
 const lista = '&language=en-US&query=';
 let rootFetch = baseUrl+key+lista+busqueda;
 let container = document.querySelector('.container-grid');
-
+let containerUp = document.querySelector('.container-up');
+let img = document.createElement('img');
+const imgRootBase = `https://image.tmdb.org/t/p/w500`;
 
 
 axios.get(rootFetch)
@@ -20,14 +22,17 @@ axios.get(rootFetch)
 
         console.log(pelicula.title);
 
-        if (pelicula.poster_path != null){
+        if (pelicula.poster_path != null) {
 
-            let rutaImg = 'https://image.tmdb.org/t/p/w300'+pelicula.poster_path;
-            container.innerHTML += `<div class="fotopeli"><img src="${rutaImg}"></div>` 
+            let rutaImg = imgRootBase+pelicula.poster_path;
+            container.innerHTML += `<div class="fotopeli"><img id='img-index' src="${rutaImg}"></div>` 
     
         }
         
        
     }
+
+    containerUp.innerHTML = `<img id = 'fondo-up' src = '${imgRootBase}${peliculas[0].poster_path}'>`;
+
 
 })
