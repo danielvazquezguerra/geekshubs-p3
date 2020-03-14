@@ -1,7 +1,7 @@
 
 const key = 'api_key=f213488ae3f21d01f82fcbb8d801c399';
 const baseUrl = 'https://api.themoviedb.org/3/search/movie?'; 
-let busqueda = 'lethal weapon';
+let busqueda = 'the godfather';
 const lista = '&language=en-US&query=';
 let rootFetch = baseUrl+key+lista+busqueda;
 let container = document.querySelector('.container-grid');
@@ -11,6 +11,7 @@ let container = document.querySelector('.container-grid');
 axios.get(rootFetch)
 .then(res => {
     let peliculas = res.data.results;
+    peliculas = peliculas.slice(0,6);
 
     console.log(peliculas)
     
