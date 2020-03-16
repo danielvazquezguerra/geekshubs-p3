@@ -1,3 +1,5 @@
+/*formato completo sin margenes ni paddings*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,8 @@
 
 }
 
+/*contenedor superior*/
+
 .container-up {
 
     display: flex;
@@ -25,14 +29,29 @@
     
 }
 
+.buscador {
+
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
 .logo {
+
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40%;
+    height: 100%;
+
 }
 
 .logo img {
-    
+
     width: 60%;
 }
 
@@ -55,10 +74,24 @@
     padding: 20px;
     box-sizing: border-box;
 
+}
+
+.div-right-up {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+    padding: 30px;
 
 }
 
+/*Descripcion y datos de la pelicula.*/
+
 #title {
+
     font-family: helvetica;
     font-weight: bold;
     color: white;
@@ -84,17 +117,7 @@
     margin-top: 10px;
 }
 
-.div-right-up {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    border: 1px solid white;
-    padding: 30px;
-}
-
+/*Contenedor de las peliculas inferior*/
 
 .container-pelis {
 
@@ -104,6 +127,7 @@
     height: 40%;
     background-image: linear-gradient(90deg,rgba(19, 19, 19, 0.87),rgb(0, 0, 0));
 
+/*input para la busqueda de las pelis*/
 
 }
 
@@ -138,6 +162,8 @@
     transition: ease-in-out;
 }
 
+/*formateado del grid para contenedor inferior*/
+
 .container-grid {
 
     display: grid;
@@ -149,20 +175,21 @@
 }
 
 .fotopeli {
+
     width: 100%;
     justify-content: center;
     overflow: hidden;
-    
 
 }
 
 #img-index {
+
     width: 100%;
  
 }
 
-
 .capa-negra {
+
     position: absolute;
     top: 0px;
     right: 0px;
@@ -175,6 +202,7 @@
 }
 
 .fondo-peli {
+
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -183,26 +211,13 @@
 }
 
 .header-up {
+
     display: flex;
     width: 100%;
     height: 20%;
 }
 
-.logo {
-    width: 40%;
-    height: 100%;
-}
 
-.buscador {
-
-    display: flex;
-    width: 60%;
-    height: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 30px;
-
-}
 .container-mid {
 
     display: flex;
@@ -232,6 +247,7 @@
 /*iconos*/
 
 .material-icons {
+
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -246,6 +262,7 @@
 }
 
 .material-icons:hover {
+
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -257,6 +274,5 @@
     direction: ltr;
     padding-right: 20px;
     transition: 0.1s ease-in-out;
-
 
 }

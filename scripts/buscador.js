@@ -1,6 +1,5 @@
 
-
-
+// Evento click que captura los datos del input. 
 
 document.querySelector('#buscar').addEventListener('click', ()=>{
 
@@ -17,6 +16,8 @@ document.querySelector('#buscar').addEventListener('click', ()=>{
     let rootFetch = baseUrl+key+lista+busqueda;
     
    
+    // Peticion a la API 
+
     axios.get(rootFetch)
 
     .then(res => {
@@ -27,7 +28,6 @@ document.querySelector('#buscar').addEventListener('click', ()=>{
 
     console.log(peliculas)
 
-    
     let fondoPeli = document.querySelector('.fondo-peli');
     let imgBusqueda = document.querySelector('.imgBusqueda');
     let title = document.querySelector('#title');
@@ -40,10 +40,12 @@ document.querySelector('#buscar').addEventListener('click', ()=>{
     console.log(input);
     const imgRootBase = `https://image.tmdb.org/t/p/w500`;
     
+// Asignacion de fondo para el Wrapper. 
 
     imgBusqueda.innerHTML = `<img class='img-busqueda' src ='${imgRootBase}${peliculas[0].poster_path}')>`;
 
 
+// Recorrido del ARRAY y peticion de solo los 5 primeros o los menos de 5. 
     
     for (pelicula of peliSlice) {
         
@@ -54,11 +56,10 @@ document.querySelector('#buscar').addEventListener('click', ()=>{
             container.innerHTML += `<div class="fotopeli"><img class="foto-down" id='img-index' src="${rutaImg}"></div>` 
     
         }
-
-        
-        
        
     }
+
+    // Filtros para los fondos. 
 
     fondoPeli.style.background = `url('${imgRootBase}${peliFondo.poster_path}')`;
     fondoPeli.style.backgroundSize = 'cover';
