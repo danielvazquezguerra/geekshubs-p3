@@ -29,7 +29,6 @@ document.querySelector('#buscar').addEventListener('click', ()=>{
 
     
     let fondoPeli = document.querySelector('.fondo-peli');
-    let img = document.createElement('img');
     let imgBusqueda = document.querySelector('.imgBusqueda');
     let title = document.querySelector('#title');
     let description = document.querySelector('#description');

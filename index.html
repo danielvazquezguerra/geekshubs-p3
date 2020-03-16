@@ -11,63 +11,61 @@
 <body>
 
 <main class="wrapper">
-<!---container superior donde aparece la sinopsis de la peli principal-->
-        
-<div class="ImgBusqueda"></div>
-
 
     <section class="container-up">
 
+            <!--header---------------------->
 
-            <header class="header-up">
+            <header class="header-up"> 
 
                     <div class="logo">
 
-                    
+                        <img src="./images/thundertv.png" alt="">
 
                     </div>
 
                     <div class="buscador">
 
-                        <input id="input-busqueda" type="text" maxlength="40"><a id="buscar" href="#"><i class="material-icons">search</i></a>
+                        <input id="input-busqueda" type="text" maxlength="40">
+
+                        <a id="buscar" href="#"><i class="material-icons">search</i></a>
 
                     </div>
 
             </header>
 
+            <!-----contenedor medio------>
+
             <section class="container-mid">
 
-                <section class="up-left">
+                <section class="up-left"> <!-----parte izquierda del contenedor medio-->
 
-                    
+                    <div class="ImgBusqueda"></div>
                     
                 </section>
 
-                <section class="up-right">
+                <section class="up-right"> <!-----parte derecha del contenedor medio-->
+
+                    <!----Datos de la Pelicula----->
 
                     <p id="title">Titulo de la Peli</p>
                     <p id="actor">Actores</p>
                     <p id="description">Descripcion de la pelicula</p>
                     
                 </section>
-                 
-
-                   
-
-                </section>
 
             </section>
 
-        </section>         
-        
     </section>
+
+    <!---capas para el fondo ---->
     
         <div class="capa-negra"></div>
         <div class="fondo-peli"></div>
         
+    <!--Contenedor de las peliculas parte inferior-->
 
-
-        <section class="container-pelis">
+    <section class="container-pelis">
 
             <section class="container-grid"> <!---Grid que será alimentado con las peliculas.-->
 
@@ -78,7 +76,11 @@
  
         
 </main>
+
+<!---scripts-->
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/buscador.js"></script>
+
 </body>
 </html>

@@ -25,6 +25,17 @@
     
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    
+    width: 60%;
+}
+
 .up-left {
     display: flex;
     justify-content: flex-end;
@@ -41,7 +52,8 @@
     width: 70%;
     height: 100%;
     border-top: 1px solid white;
-    padding: 40px;
+    padding: 20px;
+    box-sizing: border-box;
 
 
 }
@@ -51,12 +63,13 @@
     font-weight: bold;
     color: white;
     font-size: 60px;
+    line-height: 50px;
 }
 
 #actor {
     font-family: helvetica;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 40px;
     color: yellow;
 }
 
@@ -64,9 +77,9 @@
     font-family: helvetica,thin;
     font-weight: 200;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 15px;
     color: white;
-    width: 40%;
+    width: 80%;
     letter-spacing: 1px;
     margin-top: 10px;
 }
@@ -89,13 +102,40 @@
     align-items: flex-end;
     width: auto;
     height: 40%;
-    background-color: black;
+    background-image: linear-gradient(90deg,rgba(19, 19, 19, 0.87),rgb(0, 0, 0));
+
 
 }
 
-#input-busqueda {
+#input-busqueda:focus {
     width: 400px;
     height: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    border: 0px;
+    text-align:right ;
+}
+
+#input-busqueda:enabled {
+    width: 400px;
+    height: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    border: 0px;
+    text-align:right;
+    margin-right: 20px;
+
+}
+
+#input-busqueda:hover {
+    outline: none;
+    border: 0px;
+    animation: ease-in-out;
+    transition: ease-in-out;
 }
 
 .container-grid {
@@ -200,9 +240,23 @@
     display: inline-block;
     line-height: 1;
     text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
     direction: ltr;
+    transition: 0.1s ease-in-out;
+
+}
+
+.material-icons:hover {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;  /* Preferred icon size */
+    color: white;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    direction: ltr;
+    padding-right: 20px;
+    transition: 0.1s ease-in-out;
+
 
 }
