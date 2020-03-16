@@ -9,7 +9,7 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: transparent;
     overflow: hidden;
 
 }
@@ -19,15 +19,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 60%;
     overflow: hidden;
-  
-
+    background-color: transparent;
+    
 }
 
 .up-left {
     display: flex;
-    width: 40%;
+    justify-content: flex-end;
+    width: 30%;
     height: 100%;
     
 }
@@ -36,8 +37,8 @@
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    width: 60%;
+    align-items: flex-start;
+    width: 70%;
     height: 100%;
     border-top: 1px solid white;
     padding: 40px;
@@ -54,14 +55,20 @@
 
 #actor {
     font-family: helvetica;
+    font-weight: bolder;
     font-size: 20px;
-    color: white;
+    color: yellow;
 }
 
 #description {
-    font-family: helvetica;
-    font-size: 15px;
+    font-family: helvetica,thin;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 20px;
     color: white;
+    width: 40%;
+    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .div-right-up {
@@ -82,6 +89,7 @@
     align-items: flex-end;
     width: auto;
     height: 40%;
+    background-color: black;
 
 }
 
@@ -104,6 +112,7 @@
     width: 100%;
     justify-content: center;
     overflow: hidden;
+    
 
 }
 
@@ -114,12 +123,23 @@
 
 
 .capa-negra {
-    position: relative;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     background-image: linear-gradient(90deg,rgba(71, 71, 71, 0.767),rgb(0, 0, 0));
-    width: 100%;
-    height: 70%;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    mix-blend-mode: color-burn;
     
+}
+
+.fondo-peli {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+
 }
 
 .header-up {
@@ -152,13 +172,14 @@
 }
 .imgBusqueda {
 
-    position: relative;
-    left: 10%;
-    top: 10%;
-    width: 90%;
-    height: 80%;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    width: 23%;
+    height: 42%;
     z-index: 2;
     overflow: hidden;
+    
 
 }
 
